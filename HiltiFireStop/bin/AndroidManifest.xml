@@ -7,7 +7,18 @@
     <uses-sdk
         android:minSdkVersion="14"
         android:targetSdkVersion="17" />
-
+	<uses-permission android:name="android.permission.CAMERA" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+ 	<uses-permission android:name="android.permission.NFC" />
+ 	<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+ 	<uses-permission android:name="android.permission.VIBRATE" />
+ 	
+ 	
+ 	
+ 	<uses-feature android:name="android.hardware.camera" />
+ 	<uses-feature android:name="android.hardware.camera.autofocus" />
+	<uses-feature android:name="android.hardware.nfc" android:required="true" />
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -29,6 +40,66 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="MainScreen" />
+        </activity>
+        <activity
+            android:name="de.hilti.hiltifirestop.ConstructionChoose"
+            android:label="@string/title_activity_construction_choose"
+            android:parentActivityName="MainScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="MainScreen" />
+        </activity>
+        <activity
+            android:name="de.hilti.hiltifirestop.ScanRoomScreen"
+            android:label="@string/title_activity_scan_room_screen"
+            android:parentActivityName="MainScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="MainScreen" />
+        </activity>
+        <activity
+            android:name="de.hilti.hiltifirestop.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName="MainScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="MainScreen" />
+        </activity>
+        <activity
+            android:name="de.hilti.hiltifirestop.ChooseFloorPlan"
+            android:label="@string/title_activity_choose_floor_plan"
+            android:parentActivityName="MainScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="MainScreen" />
+        </activity>
+        <activity
+            android:name="de.hilti.hiltifirestop.FloorScreen"
+            android:label="@string/title_activity_floor_screen"
+            android:parentActivityName="MainScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="MainScreen" />
+        </activity>
+        <activity
+            android:name="de.hilti.hiltifirestop.ScanFireStop"
+            android:label="@string/title_activity_scan_fire_stop" >
+        </activity>
+        <activity
+            android:name="de.hilti.hiltifirestop.NotationView"
+            android:label="@string/title_activity_notation_view"
+            android:parentActivityName="ScanFireStop" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ScanFireStop" />
+        </activity>
+        <activity
+            android:name="de.hilti.hiltifirestop.FireStopDetailView"
+            android:label="@string/title_activity_fire_stop_detail_view"
+            android:parentActivityName="FloorScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="FloorScreen" />
         </activity>
     </application>
 
